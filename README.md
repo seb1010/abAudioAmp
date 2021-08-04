@@ -26,8 +26,9 @@ This stage has no voltage gain, but it greatly increases the impedance seen by t
   This took me a while to get working. I wanted the dominant pole to be formed by the output impedance of the pass transistor and the output capacitor. However this meant that ESR of the output capacitor had to be very small if I wanted any reasonable amount of gain in the feedback path. So I multiple MLCCs in parallel as the output capacitor. I was also careful when laying out the pcb so that the resistance of the traces wouldn't "add" to the ESR as much as possible.
 
   However with this approch alone I would need very large output capacitors because my difference amplifier itself had a low frequency pole. In order to remedy this I added a capacitor is series with a resitor to the point with the troublesome pole. This had two effects
-  1. created a new low frequency pole
-  1. pushed the existing pole to a much higher frequency
-  The first thing may seem problematic, but I could make this pole very low frequency and its phase shift  was "canceled" by a zero before any other poles came into play. This essentially reduced the gain of the error amplifier for important frequencies, This was acceptable because even with this in place I had an open loop gain of 20 V/V or so for these interesting frequencies and that was plenty (open loop the output impedance was already on the order of an ohm)
+    1. created a new low frequency pole
+    1. pushed the existing pole to a much higher frequency
+
+The first thing may seem problematic, but I could make this pole very low frequency and its phase shift  was "canceled" by a zero before any other poles came into play. This essentially reduced the gain of the error amplifier for important frequencies, This was acceptable because even with this in place I had an open loop gain of 20 V/V or so for these interesting frequencies and that was plenty (open loop the output impedance was already on the order of an ohm)
 
 
